@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-VlcookwebsiteApplication<vlcookwebsite>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.vlcooking.vlcookwebsite.VlcookwebsiteApplication",
+            "projectName": "vlcookwebsite",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
