@@ -1,0 +1,7 @@
+"npm i react"
+
+install react
+
+"npm i react-icons"
+
+install icons
