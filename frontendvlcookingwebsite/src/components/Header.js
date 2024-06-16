@@ -7,7 +7,7 @@ export default function Header() {
 		<header className="bg-slate-200 shadow-md">
 			<div className="flex justify-between items-center max-w-6xl mx-auto p-3">
 				<Link to="/">
-					<h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
+					<h1 className="font-bold text-md sm:text-xl flex flex-wrap">
 						<span className="text-slate-500">VLU</span>
 						<span className="text-slate-700">Cooking</span>
 					</h1>
@@ -32,7 +32,7 @@ export default function Header() {
 						<li className=" text-slate-700 hover:underline font-semibold">Sign in</li>
 					</Link>
 					<Link to="/signup">
-						<button className="hover:underline font-semibold rounded-lg px-3 py-1 bg-slate-600 text-white">
+						<button className="hover:underline font-semibold rounded-lg px-3 py-1 bg-slate-600 text-white hidden sm:inline">
 							Sign up
 						</button>
 					</Link>
