@@ -4,13 +4,13 @@ import VideoEmbed from "../components/Video";
 
 export default function Product_detail() {
   return (
-    <div className="flex flex-col justify-around bg-gray-200">
+    <div className="flex flex-col justify-around bg-gray-200 lg:font-medium">
       {/* Banner */}
       <img
         src="https://images.pexels.com/photos/11742808/pexels-photo-11742808.jpeg?cs=srgb&dl=pexels-lathinh-11742808.jpg&fm=jpg"
         className="w-full"
       />
-      <div className="flex flex-col bg-white p-8">
+      <div className="flex flex-col bg-white p-8 ">
         <h1 className=" text-8xl p-5 mb-10 ml-6 ">Cơm Tấm</h1>
         {/* Category */}
         <div className="flex ml-6 items-center mb-8">
