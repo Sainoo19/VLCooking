@@ -5,20 +5,26 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Product_detail from "./pages/Product_detail";
+import Search from "./pages/Search";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 function App() {
-	return (
-		<BrowserRouter>
-			<Header />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/product/detail" element={<Product_detail />} />
-				<Route path="/product" element={<Product />} />
-			</Routes>
-			<Footer />
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/product/detail" element={<Product_detail />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;

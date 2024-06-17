@@ -50,15 +50,13 @@ export default function Home() {
         <SwiperSlide>
           <img
             src="https://images.pexels.com/photos/11742808/pexels-photo-11742808.jpeg?cs=srgb&dl=pexels-lathinh-11742808.jpg&fm=jpg"
-            className="h-[500px]"
-            style={{ width: "100%", height: "auto" }}
+            className="h-[500px] w-full h-auto"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://images.pexels.com/photos/1337974/pexels-photo-1337974.jpeg?cs=srgb&dl=pexels-minan1398-1337974.jpg&fm=jpg"
-            className="h-[500px]"
-            style={{ width: "100%", height: "auto" }}
+            className="h-[500px] w-full h-auto"
           />
         </SwiperSlide>
       </Swiper>

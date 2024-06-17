@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Items({ listing }) {
   return (
-    <div className="bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px]">
+    <div className="bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[300px]">
       <Link to={"/product/detail"}>
         <img
           src={
