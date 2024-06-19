@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaYahoo, FaYoutube } from "react-icons/fa";
+import VLCook from "../assets/VLCook.png";
 
 export default function Footer() {
   return (
@@ -7,9 +8,12 @@ export default function Footer() {
       <div className="flex justify-around max-w-6xl mt-1">
         <div className="flex flex-col gap-10 ">
           <div className="flex flex-col items-center max-w-6xl p-3 sm:text-lg sm:content-center">
-            <h1 className="font-bold justify-center text-sm sm:text-xl flex flex-wrap w-96 max-h-60 mt-8 mb-12">
-              <span className="text-slate-500">VLU</span>
-              <span className="text-slate-700">Cooking</span>
+            <h1 className="font-bold justify-center text-sm sm:text-xl flex flex-wrap w-96 max-h-58 mt-4 mb-12">
+              <img
+                src={VLCook}
+                alt="Cooking Logo"
+                className=" min-h-32 max-h-full sm: max-h-20"
+              />
             </h1>
             <div className="flex flex-col-reverse w-64 mt-22">
               <div className="flex flex-row justify-center">
