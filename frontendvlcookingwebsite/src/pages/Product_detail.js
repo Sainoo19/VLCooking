@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Category_Items from "../components/Category_Items";
 import VideoEmbed from "../components/Video";
 
 export default function Product_detail() {
@@ -19,14 +20,10 @@ export default function Product_detail() {
 				<div className="flex ml-6 items-center mb-8">
 					<h2 className=" sm:text-2xl text-md font-bold mr-4">Category:</h2>
 					<Link to="/product">
-						<button className="mr-3 sm:text-xl text-md rounded-lg bg-red-300 px-3 py-1 font-semibold hover:underline">
-							Món chính
-						</button>
+						<Category_Items embedName="Món chính" color="bg-red-500" />
 					</Link>
 					<Link to="/product">
-						<button className="mr-3 sm:text-xl text-md rounded-lg bg-blue-300 px-3 py-1 font-semibold hover:underline">
-							Món mặn
-						</button>
+						<Category_Items embedName="Món mặn" color="bg-blue-500" />
 					</Link>
 				</div>
 
