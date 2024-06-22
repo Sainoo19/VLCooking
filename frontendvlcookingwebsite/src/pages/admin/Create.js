@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Create() {
   return (
-    <div className="max-w-6xl mx-auto p-3">
+    <div className="max-w-6xl mx-auto p-3 sm:text-lg">
       <div className=" p-3 flex flex-col gap-8 my-10">
         <h1 className="font-bold text-3xl ">Create</h1>
         <p className="text-gray-500">breadcrumbs</p>

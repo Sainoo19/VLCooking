@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Update() {
   return (
-    <div className="max-w-6xl mx-auto p-2">
+    <div className="max-w-6xl mx-auto p-2 sm:text-lg">
       <div className=" p-3 flex flex-col gap-3 my-10">
         <h1 className="font-bold text-3xl ">Update</h1>
         <p className="text-gray-500">breadcrumbs</p>
@@ -45,9 +45,12 @@ export default function Update() {
               className="border p-3 rounded-lg w-full"
             />
           </div>
-          <div className="flex flex-row gap-4 ">
+          <div className="flex flex-row ml-5 gap-4 ">
             <button className="bg-blue-600 p-3 rounded-lg hover:opacity-85 disabled:opacity-70 hover:text-white">
-              Create
+              Update
+            </button>
+            <button className="bg-blue-600 p-3 rounded-lg hover:opacity-85 disabled:opacity-70 hover:text-white">
+              Back
             </button>
           </div>
         </div>
