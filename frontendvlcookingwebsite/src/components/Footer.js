@@ -12,7 +12,7 @@ export default function Footer() {
               <img
                 src={VLCook}
                 alt="Cooking Logo"
-                className=" min-h-32 max-h-full sm: max-h-20"
+                className=" h-32  sm: max-h-20"
               />
             </h1>
             <div className="flex flex-col-reverse w-64 mt-22">

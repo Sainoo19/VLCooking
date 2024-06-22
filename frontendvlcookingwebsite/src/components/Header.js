@@ -12,7 +12,7 @@ export default function Header() {
             <img
               src={VLCook}
               alt="Cooking Logo"
-              className=" min-h-32 max-h-full sm: max-h-20"
+              className=" h-32  sm: max-h-20"
             />
           </h1>
         </Link>

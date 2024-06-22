@@ -28,5 +28,19 @@
     "editorBracketPairGuide.activeBackground3": "#87CEFA80"
   },
   "cSpell.words": ["Swiper"],
-  "java.compile.nullAnalysis.mode": "automatic"
+  "java.compile.nullAnalysis.mode": "automatic",
+  "bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue"],
+  "import/no-anonymous-default-export": [
+    "error",
+    {
+      "allowArray": false,
+      "allowArrowFunction": false,
+      "allowAnonymousClass": false,
+      "allowAnonymousFunction": false,
+      "allowCallExpression": true, // The true value here is for backward compatibility
+      "allowNew": false,
+      "allowLiteral": false,
+      "allowObject": false
+    }
+  ]
 }
