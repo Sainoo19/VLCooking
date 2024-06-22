@@ -2,14 +2,14 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
-import Table from "../../components/TableRecipe";
+import TableProducts from "../../components/TableProducts";
 
-export default function Dashboard() {
+export default function Products() {
   return (
     <div className="flex max-w-full overflow-x-auto sm:text-lg">
       <Sidebar />
       <div className=" max-w-6xl  p-3 sm:text-lg">
-        <h1 className="text-3xl">Manage Recipe</h1>
+        <h1 className="text-3xl">Manage Products</h1>
         <div className="flex flex-row-reverse gap-4 w-full">
           <form className="bg-slate-100 w-78 p-3 rounded-lg flex items-center mr-4">
             <input
@@ -26,7 +26,7 @@ export default function Dashboard() {
             Create New
           </Link>
         </div>
-        <Table Name="Recipe" />
+        <TableProducts Name="Product" />
       </div>
     </div>
   );
