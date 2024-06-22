@@ -1,15 +1,19 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import VLCook from "../assets/VLCook.png";
 
 export default function Header() {
   return (
     <header className="bg-slate-200 shadow-md">
-      <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
+      <div className="flex justify-between items-center max-w-6xl mx-auto p-2">
         <Link to="/">
           <h1 className="font-bold text-md sm:text-xl flex flex-wrap">
-            <span className="text-slate-500">VLU</span>
-            <span className="text-slate-700">Cooking</span>
+            <img
+              src={VLCook}
+              alt="Cooking Logo"
+              className=" min-h-32 max-h-full sm: max-h-20"
+            />
           </h1>
         </Link>
         {/* SearchBar */}
