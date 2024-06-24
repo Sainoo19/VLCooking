@@ -9,7 +9,7 @@ export default function Roles() {
     <div className="flex min-h-screen">
       <Sidebar />
       <div className="flex-1 p-3">
-        <div className="flex flex-col items-center mx-2">
+        <div className="flex flex-col ml-0 my-2">
           <h1 className="text-3xl font-bold">Manage Roles</h1>
         </div>
         <div className="flex flex-row-reverse my-5">

@@ -269,7 +269,7 @@ const Table = ({ Name }) => {
                 <td className=" border-r border-gray-400 w-8 py-3 pl-3 pr-3">
                   {val.id}
                 </td>
-                <td className=" border-r border-gray-400 py-3 w-24 pl-4 ">
+                <td className=" border-r border-gray-400 py-3 w-24 pl-1 ">
                   {val.rolename}
                 </td>
                 <td className="border-r flex justify-around py-3 w-36 mt-2 gap-1 h-full w-full ">

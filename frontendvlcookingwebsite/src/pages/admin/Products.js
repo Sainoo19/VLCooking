@@ -6,29 +6,31 @@ import Table from "../../components/Table";
 
 export default function Products() {
   return (
-    <div className="flex max-w-full overflow-x-auto sm:text-lg">
+    <div className="flex min-h-screen">
       <Sidebar />
-      <div className=" max-w-6xl  p-3 sm:text-lg">
-        <div className="flex flex-col items-center mx-2">
-          <h1 className="text-3xl font-bold">Manage Products</h1>
+      <div className="flex-1 p-3">
+        <div className="flex flex-col ml-0 my-2">
+          <h1 className="text-3xl font-bold">Manage Roles</h1>
         </div>
-        <div className="flex flex-row-reverse gap-4 w-full my-5">
-          <form className="bg-slate-100 w-78 p-3 rounded-lg flex items-center mr-4">
+        <div className="flex flex-row-reverse my-5">
+          <form className="bg-slate-100 p-3 rounded-lg flex items-center w-80 mr-5">
             <input
               type="text"
               placeholder="Search..."
-              className="bg-transparent focus:outline-none min-w-72   sm:w-24"
+              className="bg-transparent focus:outline-none w-full"
             />
             <FaSearch className="text-slate-600 pl-1" />
           </form>
           <Link
-            to="/admin/create/product"
-            className="flex items-center justify-center rounded-lg min-h-[48px] bg-cyan-300 px-3 py-1 text-center hover:bg-black hover:text-white"
+            to="/admin/create/role"
+            className="flex items-center justify-center mr-3 rounded-lg min-h-[48px] bg-cyan-300 px-3 py-1 text-center hover:bg-black hover:text-white"
           >
             Create New
           </Link>
         </div>
-        <Table Name="Product" />
+        <div className="flex justify-center">
+          <Table Name="Product" />
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Items({ listing }) {
   return (
-    <div className="bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[300px]">
+    <div className=" group flex flex-col bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[300px] h-[360px]">
       <Link to={"/product/detail"}>
         <img
           src={
@@ -23,6 +23,9 @@ export default function Items({ listing }) {
           </p>
         </div>
       </Link>
+      <button className="bg-red-300 text-white p-2 w-full text-center  hover:bg-cyan-400 transition-colors mt-auto hidden group-hover:block">
+        Mua hàng
+      </button>
     </div>
   );
 }
