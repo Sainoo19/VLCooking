@@ -34,6 +34,11 @@ export default function Sidebar() {
                   Products
                 </p>
               </Link>
+              <Link to="/admin/ingredient" className="">
+                <p className="mx-auto pl-4 h-10 text-xl hover:bg-slate-300">
+                  Ingredient
+                </p>
+              </Link>
             </div>
             {/* Footer */}
             <div>

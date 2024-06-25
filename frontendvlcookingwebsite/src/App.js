@@ -20,35 +20,37 @@ import Recipes from "./pages/admin/Recipes";
 import Roles from "./pages/admin/Role";
 import Update from "./pages/admin/Update";
 import Users from "./pages/admin/Users";
+import Ingredient from "./pages/admin/Ingredient";
 
 function App() {
-	return (
-		<BrowserRouter>
-			<Header />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/signup" element={<SignUp />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/signin" element={<SignIn />} />
-				<Route path="/product/detail" element={<Product_detail />} />
-				<Route path="/product" element={<Product />} />
-				<Route path="/search" element={<Search />} />
-				<Route path="/admin" element={<Recipes />} />
-				<Route path="/admin/create/user" element={<CreateUser />} />
-				<Route path="/admin/create/role" element={<CreateRole />} />
-				<Route path="/admin/create/product" element={<CreateProduct />} />
-				<Route path="/admin/create/order" element={<CreateOrder />} />
-				<Route path="/admin/create/recipe" element={<CreateRecipe />} />
-				<Route path="/admin/update" element={<Update />} />
-				<Route path="/admin/users" element={<Users />} />
-				<Route path="/admin/delete" element={<Delete />} />
-				<Route path="/admin/products" element={<Products />} />
-				<Route path="/admin/orders" element={<Orders />} />
-				<Route path="/admin/roles" element={<Roles />} />
-			</Routes>
-			<Footer />
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/product/detail" element={<Product_detail />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/admin" element={<Recipes />} />
+        <Route path="/admin/create/user" element={<CreateUser />} />
+        <Route path="/admin/create/role" element={<CreateRole />} />
+        <Route path="/admin/create/product" element={<CreateProduct />} />
+        <Route path="/admin/create/order" element={<CreateOrder />} />
+        <Route path="/admin/create/recipe" element={<CreateRecipe />} />
+        <Route path="/admin/update" element={<Update />} />
+        <Route path="/admin/users" element={<Users />} />
+        <Route path="/admin/delete" element={<Delete />} />
+        <Route path="/admin/products" element={<Products />} />
+        <Route path="/admin/orders" element={<Orders />} />
+        <Route path="/admin/roles" element={<Roles />} />
+        <Route path="/admin/ingredient" element={<Ingredient />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;
