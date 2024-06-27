@@ -71,14 +71,14 @@ const Table = ({ Name }) => {
                       size={25}
                     />
                   </Link>
-                  <Link to="/admin/update">
+                  <Link to="/admin/updater/recipe">
                     <GoPencil
                       className="text-yellow-400 hover:text-yellow-200"
                       size={25}
                     />
                   </Link>
 
-                  <Link to="/admin/delete">
+                  <Link to="/admin/delete/recipe">
                     <FaTrashAlt
                       className="text-red-400 hover:text-red-200"
                       size={25}
@@ -141,14 +141,14 @@ const Table = ({ Name }) => {
                       size={25}
                     />
                   </Link>
-                  <Link to="/admin/update">
+                  <Link to="/admin/updater/product">
                     <GoPencil
                       className="text-yellow-400 hover:text-yellow-200"
                       size={25}
                     />
                   </Link>
 
-                  <Link to="/admin/delete">
+                  <Link to="/admin/delete/product">
                     <FaTrashAlt
                       className="text-red-400 hover:text-red-200"
                       size={25}
@@ -253,7 +253,7 @@ const Table = ({ Name }) => {
       },
     ];
     return (
-      <div className="m-4 w-64">
+      <div className="m-4 w-full">
         <table className="outline outline-1 w-full">
           <tr className="outline outline-1 w-full border-b">
             <th className=" py-3 border-r border-gray-400">#</th>
@@ -269,24 +269,24 @@ const Table = ({ Name }) => {
                 <td className=" border-r border-gray-400 w-8 py-3 pl-3 pr-3">
                   {val.id}
                 </td>
-                <td className=" border-r border-gray-400 py-3 w-24 pl-1 ">
+                <td className=" border-r border-gray-400 py-3 w-full pl-1 ">
                   {val.rolename}
                 </td>
-                <td className="border-r flex justify-around py-3 w-36 mt-2 gap-1 h-full w-full ">
+                <td className="border-r flex justify-around py-3 w-36 mt-2 gap-1 h-full w-40 ">
                   <Link to="/">
                     <GrView
                       className="text-blue-400 hover:text-blue-200"
                       size={25}
                     />
                   </Link>
-                  <Link to="/admin/update">
+                  <Link to="/admin/updater/role">
                     <GoPencil
                       className="text-yellow-400 hover:text-yellow-200"
                       size={25}
                     />
                   </Link>
 
-                  <Link to="/admin/delete">
+                  <Link to="/admin/delete/role">
                     <FaTrashAlt
                       className="text-red-400 hover:text-red-200"
                       size={25}
@@ -373,14 +373,14 @@ const Table = ({ Name }) => {
                       size={25}
                     />
                   </Link>
-                  <Link to="/admin/update">
+                  <Link to="/admin/updater/other">
                     <GoPencil
                       className="text-yellow-400 hover:text-yellow-200"
                       size={25}
                     />
                   </Link>
 
-                  <Link to="/admin/delete">
+                  <Link to="/admin/delete/order">
                     <FaTrashAlt
                       className="text-red-400 hover:text-red-200"
                       size={25}
@@ -437,14 +437,14 @@ const Table = ({ Name }) => {
                       size={25}
                     />
                   </Link>
-                  <Link to="/admin/update">
+                  <Link to="/admin/updater/ingredient">
                     <GoPencil
                       className="text-yellow-400 hover:text-yellow-200"
                       size={25}
                     />
                   </Link>
 
-                  <Link to="/admin/delete">
+                  <Link to="/admin/delete/ingredient">
                     <FaTrashAlt
                       className="text-red-400 hover:text-red-200"
                       size={25}
