@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Category_Items from "../components/Category_Items";
 import RatingAndCommentSection from "../components/RatingAndCommentSection";
 import VideoEmbed from "../components/Video";
 
 export default function Product_detail() {
+  const [formData, setFormData] = useState({ quantity: 1 });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
   return (
     <div className="flex flex-col justify-around">
       {/* Banner */}
@@ -51,12 +63,20 @@ export default function Product_detail() {
           </div>
 
           {/* Buy Button */}
-          <Link
-            to="/payment"
-            className="bg-green-500 text-white px-10 py-5 text-xl rounded-lg hover:bg-white hover:text-green-500 transition-colors duration-300 mr-80"
-          >
-            Mua Hàng
-          </Link>
+          <form onSubmit={handleSubmit} className="mr-64 w-80">
+            <input
+              type="number"
+              min="1"
+              className="w-32 p-2 mr-4 border border-gray-300 rounded-md"
+              placeholder="Số lượng"
+              onChange={handleChange}
+              id="quantity"
+              value={formData.quantity}
+            />
+            <button className="bg-green-500 text-white px-10 py-5 text-xl rounded-lg hover:bg-white hover:text-green-500 transition-colors duration-300">
+              Mua Hàng
+            </button>
+          </form>
         </div>
       </div>
 
