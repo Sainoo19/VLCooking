@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SwiperCore from "swiper";
 import "swiper/css/bundle";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Items from "../components/Items";
 import Data from "../data/data.json";
@@ -39,14 +39,19 @@ export default function Home() {
           prepared to master chef standards."
         </div>
         <Link
-          to={"/about"}
+          to={"/search"}
           className="p-3 bg-black text-white rounded-lg sm:text-sm hover:bg-white hover:text-black hover:underline"
         >
           Let's Start Now
         </Link>
       </div>
       {/* swiper */}
-      <Swiper navigation>
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        navigation
+        autoplay={{ delay: 3000, disableOnInteraction: true }}
+        loop
+      >
         <SwiperSlide>
           <img
             src="https://images.pexels.com/photos/11742808/pexels-photo-11742808.jpeg?cs=srgb&dl=pexels-lathinh-11742808.jpg&fm=jpg"
@@ -65,7 +70,7 @@ export default function Home() {
 
       <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10">
         {Feature && Feature.length > 0 && (
-          <div className="">
+          <div className="w-[1305px]">
             <div className="my-3">
               <h2 className="text-2xl font-semibold text-slate-600">Feature</h2>
               <Link
@@ -76,7 +81,7 @@ export default function Home() {
               </Link>
             </div>
             {/* Items */}
-            <div className="flex flex-wrap gap-4 ">
+            <div className=" flex flex-wrap gap-4 ">
               {Feature.map((listing) => (
                 <Items listing={listing} key={listing._id} />
               ))}

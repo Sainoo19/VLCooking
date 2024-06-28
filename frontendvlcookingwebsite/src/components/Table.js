@@ -34,61 +34,64 @@ const Table = ({ Name }) => {
   if (Name === "Recipe") {
     return (
       <div className="m-4 w-full">
-        <table className="outline outline-1">
-          <tr className="outline outline-1 w-full border-b">
-            <th className=" py-3 border-r border-gray-400">#</th>
-            <th className="py-3 border-r border-gray-400">Title</th>
-            <th className="py-3 border-r border-gray-400">Author</th>
-            <th className="py-3 border-r border-gray-400">Address</th>
-            <th className="py-3 border-r border-gray-400">Category</th>
-            <th className="py-3 border-r border-gray-400">Action</th>
-          </tr>
-          {FakeData.map((val, key) => {
-            return (
-              <tr
-                className="items-center outline outline-1 outline-gray-300 w-full"
-                key={key}
-              >
-                <td className=" border-r border-gray-400 w-8 py-3 pl-3 pr-3">
-                  {val.id}
-                </td>
-                <td className="border-r border-gray-400  py-3 w-40 pr-3 pl-4 ">
-                  {val.recipe}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-60 pr-3 pl-4 ">
-                  {val.author}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-96 pr-3 pl-4 ">
-                  {val.address}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-36 pl-4 ">
-                  {val.category}
-                </td>
-                <td className="border-r border-gray-400 flex justify-around py-3 w-32 mt-4 gap-1 h-full">
-                  <Link to="/">
-                    <GrView
-                      className="text-blue-400 hover:text-blue-200"
-                      size={25}
-                    />
-                  </Link>
-                  <Link to="/admin/updater/recipe">
-                    <GoPencil
-                      className="text-yellow-400 hover:text-yellow-200"
-                      size={25}
-                    />
-                  </Link>
-
-                  <Link to="/admin/delete/recipe">
-                    <FaTrashAlt
-                      className="text-red-400 hover:text-red-200"
-                      size={25}
-                    />
-                  </Link>
-                </td>
+        <div className="max-w-[1640px] mx-auto">
+          <table className="outline outline-1 w-full">
+            <thead>
+              <tr className="outline outline-1 w-auto border-b">
+                <th className="py-3 border-r border-gray-400">#</th>
+                <th className="py-3 border-r border-gray-400">Title</th>
+                <th className="py-3 border-r border-gray-400">Author</th>
+                <th className="py-3 border-r border-gray-400">Address</th>
+                <th className="py-3 border-r border-gray-400">Category</th>
+                <th className="py-3 border-r border-gray-400">Action</th>
               </tr>
-            );
-          })}
-        </table>
+            </thead>
+            <tbody>
+              {FakeData.map((val, key) => (
+                <tr
+                  className="items-center outline outline-1 outline-gray-300 w-auto"
+                  key={key}
+                >
+                  <td className="border-r border-gray-400 w-12 py-3 pl-3 pr-3">
+                    {val.id}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 w-40 pr-3 pl-4">
+                    {val.recipe}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 w-60 pr-3 pl-4">
+                    {val.author}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 w-auto pr-3 pl-4">
+                    {val.address}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 w-36 pl-4">
+                    {val.category}
+                  </td>
+                  <td className="border-r border-gray-400 flex justify-around py-3 w-full mt-4 gap-1 h-full">
+                    <Link to="/">
+                      <GrView
+                        className="text-blue-400 hover:text-blue-200"
+                        size={25}
+                      />
+                    </Link>
+                    <Link to="/admin/updater/recipe">
+                      <GoPencil
+                        className="text-yellow-400 hover:text-yellow-200"
+                        size={25}
+                      />
+                    </Link>
+                    <Link to="/admin/delete/recipe">
+                      <FaTrashAlt
+                        className="text-red-400 hover:text-red-200"
+                        size={25}
+                      />
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   } else if (Name === "Product") {
@@ -108,57 +111,60 @@ const Table = ({ Name }) => {
     ];
     return (
       <div className="m-4 w-full">
-        <table className="outline outline-1">
-          <tr className="outline outline-1 w-full border-b">
-            <th className=" py-3 border-r border-gray-400">#</th>
-            <th className="py-3 border-r border-gray-400">Name</th>
-            <th className="py-3 border-r border-gray-400">Price</th>
-            <th className="py-3 border-r border-gray-400">Category</th>
-            <th className="py-3 border-r border-gray-400">Action</th>
-          </tr>
-          {FakeData.map((val, key) => {
-            return (
-              <tr
-                className="items-center outline outline-1 outline-gray-300 w-full"
-                key={key}
-              >
-                <td className=" border-r border-gray-400 w-8 py-3 pl-3 pr-3">
-                  {val.id}
-                </td>
-                <td className="border-r border-gray-400  py-3 w-40 pr-3 pl-4 ">
-                  {val.name}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-60 pr-3 pl-4 ">
-                  {val.price}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-96 pr-3 pl-4 ">
-                  {val.category}
-                </td>
-                <td className="border-r border-gray-400 flex justify-around py-3 w-32 mt-2 gap-1 h-full">
-                  <Link to="/">
-                    <GrView
-                      className="text-blue-400 hover:text-blue-200"
-                      size={25}
-                    />
-                  </Link>
-                  <Link to="/admin/updater/product">
-                    <GoPencil
-                      className="text-yellow-400 hover:text-yellow-200"
-                      size={25}
-                    />
-                  </Link>
-
-                  <Link to="/admin/delete/product">
-                    <FaTrashAlt
-                      className="text-red-400 hover:text-red-200"
-                      size={25}
-                    />
-                  </Link>
-                </td>
+        <div className="max-w-[1640px] mx-auto">
+          <table className="outline outline-1 w-full">
+            <thead>
+              <tr className="outline outline-1 w-full border-b">
+                <th className="py-3 border-r border-gray-400">#</th>
+                <th className="py-3 border-r border-gray-400">Name</th>
+                <th className="py-3 border-r border-gray-400">Price</th>
+                <th className="py-3 border-r border-gray-400">Category</th>
+                <th className="py-3 border-r w-36 border-gray-400">Action</th>
               </tr>
-            );
-          })}
-        </table>
+            </thead>
+            <tbody>
+              {FakeData.map((val, key) => (
+                <tr
+                  className="items-center outline outline-1 outline-gray-300 w-full"
+                  key={key}
+                >
+                  <td className="border-r border-gray-400 py-3 pl-3 pr-3">
+                    {val.id}
+                  </td>
+                  <td className="border-r border-gray-400 py-3  pr-3 pl-4">
+                    {val.name}
+                  </td>
+                  <td className="border-r border-gray-400 py-3  pr-3 pl-4">
+                    {val.price}
+                  </td>
+                  <td className="border-r border-gray-400 py-3  pr-3 pl-4">
+                    {val.category}
+                  </td>
+                  <td className="border-r border-gray-400 flex justify-around py-3 w-36 mt-2 gap-1 h-full">
+                    <Link to="/">
+                      <GrView
+                        className="text-blue-400 hover:text-blue-200"
+                        size={25}
+                      />
+                    </Link>
+                    <Link to="/admin/updater/product">
+                      <GoPencil
+                        className="text-yellow-400 hover:text-yellow-200"
+                        size={25}
+                      />
+                    </Link>
+                    <Link to="/admin/delete/product">
+                      <FaTrashAlt
+                        className="text-red-400 hover:text-red-200"
+                        size={25}
+                      />
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   } else if (Name === "User") {
@@ -180,61 +186,64 @@ const Table = ({ Name }) => {
     ];
     return (
       <div className="m-4 w-full">
-        <table className="outline outline-1">
-          <tr className="outline outline-1 w-full border-b">
-            <th className=" py-3 border-r border-gray-400">#</th>
-            <th className="py-3 border-r border-gray-400">Username</th>
-            <th className="py-3 border-r border-gray-400">Password</th>
-            <th className="py-3 border-r border-gray-400">Email</th>
-            <th className="py-3 border-r border-gray-400">Role</th>
-            <th className="py-3 border-r border-gray-400">Action</th>
-          </tr>
-          {FakeData.map((val, key) => {
-            return (
-              <tr
-                className="items-center outline outline-1 outline-gray-300 w-full"
-                key={key}
-              >
-                <td className=" border-r border-gray-400 w-8 py-3 pl-3 pr-3">
-                  {val.id}
-                </td>
-                <td className="border-r border-gray-400  py-3 w-40 pr-3 pl-4 ">
-                  {val.username}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-60 pr-3 pl-4 ">
-                  {val.password}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-96 pr-3 pl-4 ">
-                  {val.email}
-                </td>
-                <td className=" border-r border-gray-400 py-3 w-36 pl-4 ">
-                  {val.role}
-                </td>
-                <td className="border-r border-gray-400 flex justify-around py-3 w-32 mt-4 gap-1 h-full">
-                  <Link to="/">
-                    <GrView
-                      className="text-blue-400 hover:text-blue-200"
-                      size={25}
-                    />
-                  </Link>
-                  <Link to="/admin/update">
-                    <GoPencil
-                      className="text-yellow-400 hover:text-yellow-200"
-                      size={25}
-                    />
-                  </Link>
-
-                  <Link to="/admin/delete">
-                    <FaTrashAlt
-                      className="text-red-400 hover:text-red-200"
-                      size={25}
-                    />
-                  </Link>
-                </td>
+        <div className="max-w-[1640px] mx-auto">
+          <table className="outline outline-1 w-full">
+            <thead>
+              <tr className="outline outline-1 w-full border-b">
+                <th className="py-3 border-r border-gray-400">#</th>
+                <th className="py-3 border-r border-gray-400">Username</th>
+                <th className="py-3 border-r border-gray-400">Password</th>
+                <th className="py-3 border-r border-gray-400">Email</th>
+                <th className="py-3 border-r border-gray-400">Role</th>
+                <th className="py-3 border-r w-32 border-gray-400">Action</th>
               </tr>
-            );
-          })}
-        </table>
+            </thead>
+            <tbody>
+              {FakeData.map((val, key) => (
+                <tr
+                  className="items-center outline outline-1 outline-gray-300 w-full"
+                  key={key}
+                >
+                  <td className="border-r border-gray-400 py-3 pl-3 pr-3">
+                    {val.id}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 pr-3 pl-4">
+                    {val.username}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 pr-3 pl-4">
+                    {val.password}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 pr-3 pl-4">
+                    {val.email}
+                  </td>
+                  <td className="border-r border-gray-400 py-3 pl-4">
+                    {val.role}
+                  </td>
+                  <td className="border-r border-gray-400 flex justify-around py-3 w-32 mt-4 gap-1 h-full">
+                    <Link to="/">
+                      <GrView
+                        className="text-blue-400 hover:text-blue-200"
+                        size={25}
+                      />
+                    </Link>
+                    <Link to="/admin/update">
+                      <GoPencil
+                        className="text-yellow-400 hover:text-yellow-200"
+                        size={25}
+                      />
+                    </Link>
+                    <Link to="/admin/delete">
+                      <FaTrashAlt
+                        className="text-red-400 hover:text-red-200"
+                        size={25}
+                      />
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   } else if (Name === "Role") {
@@ -253,26 +262,31 @@ const Table = ({ Name }) => {
       },
     ];
     return (
-      <div className="m-4 w-full">
-        <table className="outline outline-1 w-full">
-          <tr className="outline outline-1 w-full border-b">
-            <th className=" py-3 border-r border-gray-400">#</th>
-            <th className="py-3 border-r border-gray-400">Role</th>
-            <th className="py-3 border-r border-gray-400">Action</th>
-          </tr>
-          {FakeData.map((val, key) => {
-            return (
+      <div className="max-w-[1640px] ml-0 mx-auto">
+        <table
+          className="outline outline-1"
+          style={{ width: "1640px", overflowX: "auto" }}
+        >
+          <thead>
+            <tr className="outline outline-1 w-full border-b">
+              <th className="py-3 border-r border-gray-400">#</th>
+              <th className="py-3 border-r border-gray-400">Role</th>
+              <th className="py-3 border-r border-gray-400">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {FakeData.map((val, key) => (
               <tr
-                className="items-center outline outline-1 outline-gray-300 w-full"
+                className="items-center outline outline-1 outline-gray-300"
                 key={key}
               >
-                <td className=" border-r border-gray-400 w-8 py-3 pl-3 pr-3">
+                <td className="border-r border-gray-400 py-3 pl-3 pr-3">
                   {val.id}
                 </td>
-                <td className=" border-r border-gray-400 py-3 w-full pl-1 ">
+                <td className="border-r border-gray-400 py-3  pl-1">
                   {val.rolename}
                 </td>
-                <td className="border-r flex justify-around py-3 w-36 mt-2 gap-1 h-full w-40 ">
+                <td className="border-r border-gray-400 flex justify-around py-3 mt-2 gap-1 h-full">
                   <Link to="/">
                     <GrView
                       className="text-blue-400 hover:text-blue-200"
@@ -285,7 +299,6 @@ const Table = ({ Name }) => {
                       size={25}
                     />
                   </Link>
-
                   <Link to="/admin/delete/role">
                     <FaTrashAlt
                       className="text-red-400 hover:text-red-200"
@@ -294,8 +307,8 @@ const Table = ({ Name }) => {
                   </Link>
                 </td>
               </tr>
-            );
-          })}
+            ))}
+          </tbody>
         </table>
       </div>
     );
@@ -408,26 +421,31 @@ const Table = ({ Name }) => {
     ];
     return (
       <div className="m-4 w-full">
-        <table className="outline outline-1">
-          <tr className="outline outline-1 w-full border-b">
-            <th className=" py-3 border-r border-gray-400">#</th>
-            <th className="py-3 border-r border-gray-400">IngredientID</th>
-            <th className="py-3 border-r border-gray-400">Ingredientname</th>
-            <th className="py-3 border-r border-gray-400">Action</th>
-          </tr>
-          {FakeData.map((val, key) => {
-            return (
+        <table
+          className="outline outline-1"
+          style={{ width: "1600px", overflowX: "auto" }}
+        >
+          <thead>
+            <tr className="outline outline-1 w-full border-b">
+              <th className="py-3 border-r border-gray-400">#</th>
+              <th className="py-3 border-r border-gray-400">Ingredient ID</th>
+              <th className="py-3 border-r border-gray-400">Ingredient Name</th>
+              <th className="py-3 border-r w-32 border-gray-400">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {FakeData.map((val, key) => (
               <tr
                 className="items-center outline outline-1 outline-gray-300 w-full"
                 key={key}
               >
-                <td className=" border-r border-gray-400 w-8 py-3 pl-3 pr-3">
+                <td className="border-r border-gray-400 py-3 pl-3 pr-3">
                   {val.id}
                 </td>
-                <td className="border-r border-gray-400  py-3 w-40 pr-3 pl-4 ">
+                <td className="border-r border-gray-400 py-3 pr-3 pl-4">
                   {val.ingredientid}
                 </td>
-                <td className=" border-r border-gray-400 py-3 w-60 pr-3 pl-4 ">
+                <td className="border-r border-gray-400 py-3 pr-3 pl-4">
                   {val.ingredientname}
                 </td>
                 <td className="border-r border-gray-400 flex justify-around py-3 w-32 mt-4 gap-1 h-full">
@@ -443,7 +461,6 @@ const Table = ({ Name }) => {
                       size={25}
                     />
                   </Link>
-
                   <Link to="/admin/delete/ingredient">
                     <FaTrashAlt
                       className="text-red-400 hover:text-red-200"
@@ -452,8 +469,8 @@ const Table = ({ Name }) => {
                   </Link>
                 </td>
               </tr>
-            );
-          })}
+            ))}
+          </tbody>
         </table>
       </div>
     );
