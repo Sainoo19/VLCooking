@@ -1,7 +1,7 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import VLCook from "../assets/VLCook.png";
+import VLCook from "../assets/LogoVLCooking.png";
 
 export default function Header() {
   return (
@@ -29,6 +29,11 @@ export default function Header() {
           <Link to="/" className="">
             <li className="hidden sm:inline text-slate-700 hover:underline font-semibold">
               Home
+            </li>
+          </Link>
+          <Link to="/search" className="">
+            <li className="hidden sm:inline text-slate-700 hover:underline font-semibold">
+              Product
             </li>
           </Link>
           <Link to="/about">

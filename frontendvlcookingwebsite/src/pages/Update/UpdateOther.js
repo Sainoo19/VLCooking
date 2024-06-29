@@ -1,47 +1,54 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Update() {
+export default function UpdateOther() {
   return (
     <div className="max-w-6xl mx-auto p-2 sm:text-lg">
       <div className=" p-3 flex flex-col gap-3 my-10">
-        <h1 className="font-bold text-3xl ">Update</h1>
+        <h1 className="font-bold text-3xl ">Update Other</h1>
         <p className="text-gray-500">breadcrumbs</p>
       </div>
       <form className="flex flex-col gap-4 min-w-2xl items-center">
         <div className="flex flex-col w-full">
           <div className="w-full p-4">
-            <p className="p-2">Email:</p>
+            <p className="p-2">Username:</p>
             <input
-              type="email"
-              placeholder="Email"
+              type="text"
+              placeholder="Username"
+              className="border p-3 rounded-lg w-full"
+            />
+          </div>
+          <div className="w-full p-4">
+            <p className="p-2">ProductName:</p>
+            <input
+              type="text"
+              placeholder="Username"
               className="border p-3 rounded-lg w-full"
             />
           </div>
 
           <div className="w-full p-4">
-            <p className="p-2">Phone Number:</p>
+            <p className="p-2">Quantity:</p>
             <input
               type="tel"
-              placeholder="Phone"
+              placeholder="Quantity"
               className="border p-3 rounded-lg w-full"
-              pattern="[0-9]{10}"
             />
           </div>
-
           <div className="w-full p-4">
-            <p className="p-2">Full Name:</p>
+            <p className="p-2">TotalPrice:</p>
             <input
-              type="text"
-              placeholder="Full Name"
+              type="tel"
+              placeholder="TotalPrice"
               className="border p-3 rounded-lg w-full"
             />
           </div>
 
           <div className="w-full p-4">
-            <p className="p-2">Address:</p>
+            <p className="p-2">Status:</p>
             <input
               type="text"
-              placeholder="Address"
+              placeholder="Status"
               className="border p-3 rounded-lg w-full"
             />
           </div>
@@ -49,9 +56,12 @@ export default function Update() {
             <button className="bg-blue-600 p-3 rounded-lg hover:opacity-85 disabled:opacity-70 hover:text-white">
               Update
             </button>
-            <button className="bg-blue-600 p-3 rounded-lg hover:opacity-85 disabled:opacity-70 hover:text-white">
+            <Link
+              to="/admin/orders"
+              className="bg-blue-600 p-3 rounded-lg hover:opacity-85 disabled:opacity-70 hover:text-white"
+            >
               Back
-            </button>
+            </Link>
           </div>
         </div>
       </form>

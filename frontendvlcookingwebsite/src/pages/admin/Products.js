@@ -10,7 +10,7 @@ export default function Products() {
 			<Sidebar />
 			<div className="flex-1 p-3">
 				<div className="flex flex-col ml-0 my-2">
-					<h1 className="text-3xl font-bold">Manage Roles</h1>
+					<h1 className="text-3xl font-bold">Manage Product</h1>
 				</div>
 				<div className="flex flex-row-reverse my-5">
 					<form className="bg-slate-100 p-3 rounded-lg flex items-center w-80 mr-5">
@@ -25,7 +25,7 @@ export default function Products() {
 					</Link>
 				</div>
 				<div className="flex justify-center">
-					<Table Name="Product" />
+					<Table Name="products" />
 				</div>
 			</div>
 		</div>
