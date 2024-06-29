@@ -1,0 +1,11 @@
+"npm i react"
+
+install react
+
+"npm i react-icons"
+
+install icons
+
+"npm i swiper"
+
+install swiper

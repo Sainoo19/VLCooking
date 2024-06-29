@@ -1,3 +1,46 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.highlightActiveIndentation": false,
+  "workbench.colorCustomizations": {
+    // Bracket colors
+    "editorBracketHighlight.foreground1": "#FFD700",
+    "editorBracketHighlight.foreground2": "#DA70D6",
+    "editorBracketHighlight.foreground3": "#179fff",
+    // Inactive guide colors
+    "editorBracketPairGuide.background1": "#ffd90080",
+    "editorBracketPairGuide.background2": "#CC66CC80",
+    "editorBracketPairGuide.background3": "#87CEFA80",
+    // Active guide colors
+    "editorBracketPairGuide.activeBackground1": "#ffd90080",
+    "editorBracketPairGuide.activeBackground2": "#CC66CC80",
+    "editorBracketPairGuide.activeBackground3": "#87CEFA80"
+  },
+  "cSpell.words": ["Swiper"],
+  "java.compile.nullAnalysis.mode": "automatic",
+  "bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue"],
+  "import/no-anonymous-default-export": [
+    "error",
+    {
+      "allowArray": false,
+      "allowArrowFunction": false,
+      "allowAnonymousClass": false,
+      "allowAnonymousFunction": false,
+      "allowCallExpression": true, // The true value here is for backward compatibility
+      "allowNew": false,
+      "allowLiteral": false,
+      "allowObject": false
+    }
+  ]
 }
