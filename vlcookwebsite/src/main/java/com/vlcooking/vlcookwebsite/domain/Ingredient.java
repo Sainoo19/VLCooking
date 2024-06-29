@@ -2,6 +2,8 @@ package com.vlcooking.vlcookwebsite.domain;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +20,7 @@ public class Ingredient {
 
     private String name;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "ingredient")
     private List<RecipeIngredient> recipeIngredients;
 

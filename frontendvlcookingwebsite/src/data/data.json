@@ -22,5 +22,21 @@
     "description": "Com Tam is Vietnamese",
     "categories": ["Mặn", "Truyền Thống"],
     "ingredients": ["rider", "pork", "vegetables"]
+  },
+  {
+    "_id": 4,
+    "title": "Cơm Tấm",
+    "image": "https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?cs=srgb&dl=pexels-minan1398-941195.jpg&fm=jpg",
+    "description": "Com Tam is Vietnamese",
+    "categories": ["Mặn", "Truyền Thống"],
+    "ingredients": ["rider", "pork", "vegetables"]
+  },
+  {
+    "_id": 5,
+    "title": "Cơm Tấm",
+    "image": "https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?cs=srgb&dl=pexels-minan1398-941195.jpg&fm=jpg",
+    "description": "Com Tam is Vietnamese",
+    "categories": ["Mặn", "Truyền Thống"],
+    "ingredients": ["rider", "pork", "vegetables"]
   }
 ]
