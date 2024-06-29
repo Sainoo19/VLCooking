@@ -1,20 +1,20 @@
 import React from "react";
 
-export default function CreateRole() {
+export default function CreaterIngredient() {
   return (
-    <div className="max-w-6xl mx-auto p-3 sm:text-lg mb-[185px]">
+    <div className="max-w-6xl mx-auto p-3 sm:text-lgmb-[185px]">
       <div className=" p-3 flex flex-col gap-8 my-10">
-        <h1 className="font-bold text-3xl ">Create Role</h1>
+        <h1 className="font-bold text-3xl ">Create Ingredient</h1>
         <p className="text-gray-500">breadcrumbs</p>
       </div>
       <form className="flex flex-col gap-4 min-w-2xl items-center">
         <div className="flex flex-col w-full">
           <div className="flex flex-row gap-4">
             <div className="w-full p-4">
-              <p className="p-2">Role:</p>
+              <p className="p-2">Ingredient:</p>
               <input
                 type="text"
-                placeholder="Role"
+                placeholder="Ingredient"
                 className="border p-3 rounded-lg w-full"
               />
             </div>

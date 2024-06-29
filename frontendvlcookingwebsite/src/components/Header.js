@@ -33,7 +33,7 @@ export default function Header() {
           </Link>
           <Link to="/search" className="">
             <li className="hidden sm:inline text-slate-700 hover:underline font-semibold">
-              Product
+              Recipe
             </li>
           </Link>
           <Link to="/about">
