@@ -14,12 +14,12 @@ import Product_detail from "./pages/Product_detail";
 import Search from "./pages/Search";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import Update from "./pages/Update/Update";
 import UpdateIngredient from "./pages/Update/UpdateIngredient";
 import UpdateOther from "./pages/Update/UpdateOther";
 import UpdateProduct from "./pages/Update/UpdateProduct";
 import UpdateRecipe from "./pages/Update/UpdateRecipe";
 import UpdateRole from "./pages/Update/UpdateRole";
+import UpdateUser from "./pages/Update/UpdateUser";
 import CreateOrder from "./pages/admin/CreateOrder";
 import CreateProduct from "./pages/admin/CreateProduct";
 import CreateRecipe from "./pages/admin/CreateRecipe";
@@ -54,7 +54,7 @@ function App() {
 				<Route path="/admin/create/recipe" element={<CreateRecipe />} />
 				<Route path="/payment" element={<Payment />} />
 				<Route path="/payment/confirm" element={<PaymentConfirm />} />
-				<Route path="/admin/update" element={<Update />} />
+				<Route path="/admin/updater/user" element={<UpdateUser />} />
 				<Route path="/admin/users" element={<Users />} />
 				<Route path="/admin/delete" element={<Delete />} />
 				<Route path="/admin/products" element={<Products />} />

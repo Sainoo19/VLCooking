@@ -165,7 +165,7 @@ const Table = ({ Name }) => {
 										<Link to="/">
 											<GrView className="text-blue-400 hover:text-blue-200" size={25} />
 										</Link>
-										<Link to="/admin/update">
+										<Link to="/admin/updater/user">
 											<GoPencil className="text-yellow-400 hover:text-yellow-200" size={25} />
 										</Link>
 										<Link to="/admin/delete">
