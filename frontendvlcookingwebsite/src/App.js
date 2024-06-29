@@ -3,11 +3,11 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import About from "./pages/About";
 import Delete from "./pages/Delete/Delete";
-import DeleteIngredient from "./pages/Delete/DeleteIngredient";
-import DeleteOthers from "./pages/Delete/DeleteOthers";
-import DeleteProduct from "./pages/Delete/DeleteProduct";
-import DeleteRecipe from "./pages/Delete/DeleteRecipe";
-import DeleteRole from "./pages/Delete/DeleteRole";
+// import DeleteIngredient from "./pages/Delete/DeleteIngredient";
+// import DeleteOthers from "./pages/Delete/DeleteOthers";
+// import DeleteProduct from "./pages/Delete/DeleteProduct";
+// import DeleteRecipe from "./pages/Delete/DeleteRecipe";
+// import DeleteRole from "./pages/Delete/DeleteRole";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Product_detail from "./pages/Product_detail";
@@ -35,50 +35,47 @@ import Payment from "./pages/payment/Payment";
 import PaymentConfirm from "./pages/payment/PaymentConfirm";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/product/detail" element={<Product_detail />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/admin" element={<Recipes />} />
-        <Route path="/admin/create/user" element={<CreateUser />} />
-        <Route path="/admin/create/role" element={<CreateRole />} />
-        <Route path="/admin/create/product" element={<CreateProduct />} />
-        <Route path="/admin/create/order" element={<CreateOrder />} />
-        <Route path="/admin/create/recipe" element={<CreateRecipe />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/payment/confirm" element={<PaymentConfirm />} />
-        <Route path="/admin/update" element={<Update />} />
-        <Route path="/admin/users" element={<Users />} />
-        <Route path="/admin/delete" element={<Delete />} />
-        <Route path="/admin/products" element={<Products />} />
-        <Route path="/admin/orders" element={<Orders />} />
-        <Route path="/admin/roles" element={<Roles />} />
-        <Route path="/admin/ingredient" element={<Ingredient />} />
-        <Route path="/admin/updater/recipe" element={<UpdateRecipe />} />
-        <Route path="/admin/updater/other" element={<UpdateOther />} />
-        <Route
-          path="/admin/updater/ingredient"
-          element={<UpdateIngredient />}
-        />
-        <Route path="/admin/updater/product" element={<UpdateProduct />} />
-        <Route path="/admin/updater/role" element={<UpdateRole />} />
-        <Route path="/admin/delete/product" element={<DeleteProduct />} />
+	return (
+		<BrowserRouter>
+			<Header />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/signup" element={<SignUp />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/signin" element={<SignIn />} />
+				<Route path="/product/detail" element={<Product_detail />} />
+				<Route path="/product" element={<Product />} />
+				<Route path="/search" element={<Search />} />
+				<Route path="/admin" element={<Recipes />} />
+				<Route path="/admin/create/user" element={<CreateUser />} />
+				<Route path="/admin/create/role" element={<CreateRole />} />
+				<Route path="/admin/create/product" element={<CreateProduct />} />
+				<Route path="/admin/create/order" element={<CreateOrder />} />
+				<Route path="/admin/create/recipe" element={<CreateRecipe />} />
+				<Route path="/payment" element={<Payment />} />
+				<Route path="/payment/confirm" element={<PaymentConfirm />} />
+				<Route path="/admin/update" element={<Update />} />
+				<Route path="/admin/users" element={<Users />} />
+				<Route path="/admin/delete" element={<Delete />} />
+				<Route path="/admin/products" element={<Products />} />
+				<Route path="/admin/orders" element={<Orders />} />
+				<Route path="/admin/roles" element={<Roles />} />
+				<Route path="/admin/ingredient" element={<Ingredient />} />
+				<Route path="/admin/updater/recipe" element={<UpdateRecipe />} />
+				<Route path="/admin/updater/other" element={<UpdateOther />} />
+				<Route path="/admin/updater/ingredient" element={<UpdateIngredient />} />
+				<Route path="/admin/updater/product" element={<UpdateProduct />} />
+				<Route path="/admin/updater/role" element={<UpdateRole />} />
+				{/* <Route path="/admin/delete/product" element={<DeleteProduct />} />
         <Route path="/admin/delete/order" element={<DeleteOthers />} />
         <Route path="/admin/delete/role" element={<DeleteRole />} />
         <Route path="/admin/delete/ingredient" element={<DeleteIngredient />} />
-        <Route path="/admin/delete/recipe" element={<DeleteRecipe />} />
-        <Route path="/admin/delete/user" element={<Delete />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+        <Route path="/admin/delete/recipe" element={<DeleteRecipe />} /> */}
+				<Route path="/admin/delete" element={<Delete />} />
+			</Routes>
+			<Footer />
+		</BrowserRouter>
+	);
 }
 
 export default App;
