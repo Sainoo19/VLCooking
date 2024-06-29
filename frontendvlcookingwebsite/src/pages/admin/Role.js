@@ -25,7 +25,7 @@ export default function Roles() {
 					</Link>
 				</div>
 				<div className="flex ml-0">
-					<Table Name="roles" />
+					<Table Name="roles" route="roles"/>
 				</div>
 			</div>
 		</div>

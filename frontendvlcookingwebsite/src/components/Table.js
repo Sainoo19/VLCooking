@@ -138,22 +138,7 @@ const Table = ({ Name,route }) => {
 			</div>
 		);
 	} else if (Name === "users") {
-		const FakeData = [
-			{
-				id: "1",
-				username: "Nguyễn Phúc Trọng",
-				password: "1123213*****",
-				email: "Trong@gmail.com",
-				role: "admin",
-			},
-			{
-				id: "2",
-				username: "Nguyễn Văn A",
-				password: "1123213*****",
-				email: "A@gmail.com",
-				role: "customer",
-			},
-		];
+		
 		return (
 			<div className="m-4 w-full">
 				<div className="max-w-[1640px] mx-auto">
@@ -162,20 +147,20 @@ const Table = ({ Name,route }) => {
 							<tr className="outline outline-1 w-full border-b">
 								<th className="py-3 border-r border-gray-400">#</th>
 								<th className="py-3 border-r border-gray-400">Username</th>
-								<th className="py-3 border-r border-gray-400">Password</th>
+							
 								<th className="py-3 border-r border-gray-400">Email</th>
 								<th className="py-3 border-r border-gray-400">Role</th>
 								<th className="py-3 border-r w-32 border-gray-400">Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							{FakeData.map((val, key) => (
-								<tr className="items-center outline outline-1 outline-gray-300 w-full" key={key}>
-									<td className="border-r border-gray-400 py-3 pl-3 pr-3">{val.id}</td>
-									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{val.username}</td>
-									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{val.password}</td>
-									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{val.email}</td>
-									<td className="border-r border-gray-400 py-3 pl-4">{val.role}</td>
+							{admin.map((user) => (
+                  <tr key={user.id} className="items-center outline outline-1 outline-gray-300 w-full" >
+									<td className="border-r border-gray-400 py-3 pl-3 pr-3">{user.userId}</td>
+									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{user.username}</td>
+									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{user.email}</td>
+									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{user.roleName}</td>
+								
 									<td className="border-r border-gray-400 flex justify-around py-3 w-32 mt-4 gap-1 h-full">
 										<Link to="/">
 											<GrView className="text-blue-400 hover:text-blue-200" size={25} />
@@ -195,20 +180,7 @@ const Table = ({ Name,route }) => {
 			</div>
 		);
 	} else if (Name === "roles") {
-		const FakeData = [
-			{
-				id: "1",
-				rolename: "admin",
-			},
-			{
-				id: "2",
-				rolename: "customer",
-			},
-			{
-				id: "3",
-				rolename: "staff",
-			},
-		];
+		
 		return (
 			<div className="max-w-[1640px] m-4 mx-auto">
 				<table className="outline outline-1" style={{ width: "1540px", overflowX: "auto" }}>
@@ -220,10 +192,10 @@ const Table = ({ Name,route }) => {
 						</tr>
 					</thead>
 					<tbody>
-						{FakeData.map((val, key) => (
-							<tr className="items-center outline outline-1 outline-gray-300" key={key}>
-								<td className="border-r border-gray-400 py-3 pl-3 pr-3">{val.id}</td>
-								<td className="border-r border-gray-400 py-3  pl-1">{val.rolename}</td>
+						{admin.map((role) => (
+            <tr key={role.id} className="items-center outline outline-1 outline-gray-300" >
+								<td className="border-r border-gray-400 py-3 pl-3 pr-3">{role.roleId}</td>
+								<td className="border-r border-gray-400 py-3  pl-1">{role.name}</td>
 								<td className=" border-gray-400 flex justify-around py-3 w-32 mt-2 gap-1 h-full">
 									<Link to="/">
 										<GrView className="text-blue-400 hover:text-blue-200" size={25} />
@@ -308,35 +280,24 @@ const Table = ({ Name,route }) => {
 			</div>
 		);
 	} else if (Name === "ingredients") {
-		const FakeData = [
-			{
-				id: "1",
-				ingredientid: "1",
-				ingredientname: "Rau",
-			},
-			{
-				id: "2",
-				ingredientid: "2",
-				ingredientname: "Rice",
-			},
-		];
+		
 		return (
 			<div className="max-w-[1640px] m-4 w-full">
 				<table className="outline outline-1" style={{ width: "1540px", overflowX: "auto" }}>
 					<thead>
 						<tr className="outline outline-1 w-full border-b">
 							<th className="py-3 border-r border-gray-400">#</th>
-							<th className="py-3 border-r border-gray-400">Ingredient ID</th>
+							
 							<th className="py-3 border-r border-gray-400">Ingredient Name</th>
 							<th className="py-3 border-r w-32 border-gray-400">Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						{FakeData.map((val, key) => (
-							<tr className="items-center outline outline-1 outline-gray-300 w-full" key={key}>
-								<td className="border-r border-gray-400 py-3 pl-3 pr-3">{val.id}</td>
-								<td className="border-r border-gray-400 py-3 pr-3 pl-4">{val.ingredientid}</td>
-								<td className="border-r border-gray-400 py-3 pr-3 pl-4">{val.ingredientname}</td>
+						{admin.map((ingredient) => (
+            <tr key={ingredient.id} className="items-center outline outline-1 outline-gray-300 w-full" >
+								
+								<td className="border-r border-gray-400 py-3 pr-3 pl-4">{ingredient.ingredientId}</td>
+								<td className="border-r border-gray-400 py-3 pr-3 pl-4">{ingredient.name}</td>
 								<td className="border-r border-gray-400 flex justify-around py-3 w-32 mt-4 gap-1 h-full">
 									<Link to="/">
 										<GrView className="text-blue-400 hover:text-blue-200" size={25} />

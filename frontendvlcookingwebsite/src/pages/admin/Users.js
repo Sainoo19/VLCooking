@@ -25,7 +25,7 @@ export default function Users() {
 					</Link>
 				</div>
 				<div className="flex justify-center">
-					<Table Name="users" route="roles"/>
+					<Table Name="users" route="users"/>
 				</div>
 			</div>
 		</div>
