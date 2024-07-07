@@ -17,7 +17,8 @@ const Table = ({ Name,route }) => {
       .catch(error => {
         console.error("There was an error fetching the users!", error);
       });
-  }, []);
+  }, [route]);
+
   const FakeData = [
     {
       id: "1",
@@ -155,7 +156,7 @@ const Table = ({ Name,route }) => {
 						</thead>
 						<tbody>
 							{admin.map((user) => (
-                  <tr key={user.id} className="items-center outline outline-1 outline-gray-300 w-full" >
+                  			<tr key={user.id} className="items-center outline outline-1 outline-gray-300 w-full" >
 									<td className="border-r border-gray-400 py-3 pl-3 pr-3">{user.userId}</td>
 									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{user.username}</td>
 									<td className="border-r border-gray-400 py-3 pr-3 pl-4">{user.email}</td>
@@ -165,9 +166,10 @@ const Table = ({ Name,route }) => {
 										<Link to="/">
 											<GrView className="text-blue-400 hover:text-blue-200" size={25} />
 										</Link>
-										<Link to="/admin/updater/user">
-											<GoPencil className="text-yellow-400 hover:text-yellow-200" size={25} />
-										</Link>
+										 <Link to={`/admin/updater/user/${user.userId}`}>
+                      						<GoPencil className="text-yellow-400 hover:text-yellow-200" size={25} />
+                    					</Link>
+
 										<Link to="/admin/delete">
 											<FaTrashAlt className="text-red-400 hover:text-red-200" size={25} />
 										</Link>

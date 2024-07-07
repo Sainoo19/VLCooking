@@ -69,8 +69,8 @@ function App() {
         <Route path="/payment/confirm" element={<PaymentConfirm />} />
 
         {/* admin */}
-
-        <Route path="/admin/updater/user" element={<UpdateUser />} />
+        <Route path="/admin/updater/user/:userId" element={<UpdateUser />}  />
+        {/* <Route path="/admin/updater/user" element={<UpdateUser />} /> */}
         <Route path="/admin/users" element={<Users />} />
         <Route path="/admin/delete" element={<Delete />} />
         <Route path="/admin/products" element={<Products />} />
