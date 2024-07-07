@@ -4,7 +4,7 @@ import VLCook from "../assets/LogoVLCooking.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-300 pt-5 inset-0 bottom-0 sm:text-lg">
+    <footer className="bg-slate-300 mg-0 pt-5 inset-0 bottom-0 sm:text-lg">
       <div className="flex justify-around w-full mt-1">
         <div className="flex flex-col gap-10 -ml-48">
           <div className="flex flex-col items-center w-full p-3 sm:text-lg sm:content-center">

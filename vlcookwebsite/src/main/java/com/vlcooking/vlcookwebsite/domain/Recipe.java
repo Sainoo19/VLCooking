@@ -47,6 +47,7 @@ public class Recipe {
     private int prepTime;
     private int cookTime;
     private float rating;
+    private float price;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -56,13 +57,16 @@ public class Recipe {
     @OneToMany(mappedBy = "recipe")
     private List<RecipeIngredient> recipeIngredients;
 
+    @OneToMany(mappedBy = "recipe")
+    private List<OrderDetail> orderDetails;
+
     public Recipe() {
     }
 
     public Recipe(long recipeId, String title, String description, String instructions, User author,
             List<CategoryRecipe> categoryRecipes, String image, String imageBackground, String video, int prepTime,
-            int cookTime, float rating, LocalDateTime createdAt, LocalDateTime updatedAt, List<Review> reviews,
-            List<RecipeIngredient> recipeIngredients) {
+            int cookTime, float rating, float price, LocalDateTime createdAt, LocalDateTime updatedAt,
+            List<Review> reviews, List<RecipeIngredient> recipeIngredients, List<OrderDetail> orderDetails) {
         this.recipeId = recipeId;
         this.title = title;
         this.description = description;
@@ -75,10 +79,12 @@ public class Recipe {
         this.prepTime = prepTime;
         this.cookTime = cookTime;
         this.rating = rating;
+        this.price = price;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.reviews = reviews;
         this.recipeIngredients = recipeIngredients;
+        this.orderDetails = orderDetails;
     }
 
     public long getRecipeId() {
@@ -177,6 +183,14 @@ public class Recipe {
         this.rating = rating;
     }
 
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -208,5 +222,16 @@ public class Recipe {
     public void setRecipeIngredients(List<RecipeIngredient> recipeIngredients) {
         this.recipeIngredients = recipeIngredients;
     }
+
+    public List<OrderDetail> getOrderDetails() {
+        return orderDetails;
+    }
+
+    public void setOrderDetails(List<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
+
+        
+    
 
 }

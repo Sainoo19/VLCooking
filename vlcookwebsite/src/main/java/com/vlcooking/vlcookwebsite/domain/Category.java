@@ -22,9 +22,7 @@ public class Category {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @OneToMany(mappedBy = "category")
-    private List<Product> products;
-
+    
     @OneToMany(mappedBy = "category")
     private List<CategoryRecipe> categoryRecipes;
 
@@ -32,12 +30,12 @@ public class Category {
 
     }
 
-    public Category(long categoryId, String name, String description, List<Product> products,
+    public Category(long categoryId, String name, String description, 
             List<CategoryRecipe> categoryRecipes) {
         this.categoryId = categoryId;
         this.name = name;
         this.description = description;
-        this.products = products;
+        
         this.categoryRecipes = categoryRecipes;
     }
 
@@ -65,13 +63,7 @@ public class Category {
         this.description = description;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
+    
 
     public List<CategoryRecipe> getCategoryRecipes() {
         return categoryRecipes;
