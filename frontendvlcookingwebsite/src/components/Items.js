@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Items({ listing }) {
+export default function Items({ listing, handleAddToCart }) {
   return (
     <div className=" flex flex-col bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[300px] h-[360px]">
       <Link to={"/product/detail"}>
@@ -23,12 +23,13 @@ export default function Items({ listing }) {
           </p>
         </div>
       </Link>
-      <Link
-        to="/payment"
+
+      <button
         className="bg-red-300 text-white p-2 w-full text-center  hover:bg-cyan-400 transition-colors mt-auto"
+        onClick={handleAddToCart}
       >
-        <button Link>Mua hàng</button>
-      </Link>
+        Mua hàng
+      </button>
     </div>
   );
 }

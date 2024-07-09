@@ -1,0 +1,20 @@
+[
+  {
+    "_id": 1,
+    "title": "Cơm Tấm",
+    "price": 15.0,
+    "quantity": 1
+  },
+  {
+    "_id": 2,
+    "title": "Bún Bò Huế",
+    "price": 20.0,
+    "quantity": 2
+  },
+  {
+    "_id": 3,
+    "title": "Phở",
+    "price": 18.0,
+    "quantity": 1
+  }
+]

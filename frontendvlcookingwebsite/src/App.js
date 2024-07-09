@@ -8,9 +8,11 @@ import Delete from "./pages/Delete/Delete";
 // import DeleteProduct from "./pages/Delete/DeleteProduct";
 // import DeleteRecipe from "./pages/Delete/DeleteRecipe";
 // import DeleteRole from "./pages/Delete/DeleteRole";
+import CartModel from "./pages/CartModel";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Product_detail from "./pages/Product_detail";
+import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
@@ -50,6 +52,8 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/search" element={<Search />} />
         <Route path="/admin" element={<Recipes />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/cart" element={<CartModel />} />
 
         {/* create admin */}
 
@@ -69,7 +73,7 @@ function App() {
         <Route path="/payment/confirm" element={<PaymentConfirm />} />
 
         {/* admin */}
-        <Route path="/admin/updater/user/:userId" element={<UpdateUser />}  />
+        <Route path="/admin/updater/user/:userId" element={<UpdateUser />} />
         {/* <Route path="/admin/updater/user" element={<UpdateUser />} /> */}
         <Route path="/admin/users" element={<Users />} />
         <Route path="/admin/delete" element={<Delete />} />

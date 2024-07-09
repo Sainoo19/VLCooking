@@ -4,12 +4,20 @@ import SwiperCore from "swiper";
 import "swiper/css/bundle";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import CartIcon from "../components/CartIcon";
 import Items from "../components/Items";
+import CartData from "../data/cartdata.json";
 import Data from "../data/data.json";
 
 export default function Home() {
   const [Feature, setFeature] = useState([]);
+  const [itemCount, setItemCount] = useState(CartData.length); // Thêm state cho itemCount
+
   SwiperCore.use([Navigation]);
+
+  const handleAddToCart = (item) => {
+    setItemCount(itemCount + 1);
+  };
 
   // fetch data
   useEffect(() => {
@@ -55,14 +63,14 @@ export default function Home() {
         <SwiperSlide>
           <img
             src="https://images.pexels.com/photos/11742808/pexels-photo-11742808.jpeg?cs=srgb&dl=pexels-lathinh-11742808.jpg&fm=jpg"
-            className="h-[500px] w-full h-auto"
+            className="h-[500px] w-full"
             alt="Images"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="https://images.pexels.com/photos/1337974/pexels-photo-1337974.jpeg?cs=srgb&dl=pexels-minan1398-1337974.jpg&fm=jpg"
-            className="h-[500px] w-full h-auto"
+            className="h-[500px] w-full"
             alt="Images"
           />
         </SwiperSlide>
@@ -83,12 +91,20 @@ export default function Home() {
             {/* Items */}
             <div className=" flex flex-wrap gap-4 ">
               {Feature.map((listing) => (
-                <Items listing={listing} key={listing._id} />
+                <Items
+                  listing={listing}
+                  key={listing._id}
+                  handleAddToCart={handleAddToCart}
+                />
               ))}
             </div>
           </div>
         )}
       </div>
+
+      <Link to="/cart">
+        <CartIcon itemCount={itemCount} />
+      </Link>
     </div>
   );
 }

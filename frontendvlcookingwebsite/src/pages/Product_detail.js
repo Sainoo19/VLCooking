@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import CartIcon from "../components/CartIcon";
 import Category_Items from "../components/Category_Items";
 import RatingAndCommentSection from "../components/RatingAndCommentSection";
 import VideoEmbed from "../components/Video";
+import CartData from "../data/cartdata.json";
 
 export default function Product_detail() {
   const [formData, setFormData] = useState({ quantity: 1 });
+  const [itemCount, setItemCount] = useState(CartData.length); // Thêm state cho itemCount
+
+  // const handleAddToCart = () => {
+  //   setItemCount(itemCount + 1);
+  // };
 
   const handleChange = (e) => {
     setFormData({
@@ -16,6 +23,7 @@ export default function Product_detail() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    setItemCount(itemCount + 1);
   };
   return (
     <div className="flex flex-col justify-around">
@@ -73,7 +81,10 @@ export default function Product_detail() {
               id="quantity"
               value={formData.quantity}
             />
-            <button className="bg-green-500 text-white px-10 py-5 text-xl rounded-lg hover:bg-white hover:text-green-500 transition-colors duration-300">
+            <button
+              // onClick={handleAddToCart}
+              className="bg-green-500 text-white px-10 py-5 text-xl rounded-lg hover:bg-white hover:text-green-500 transition-colors duration-300"
+            >
               Mua Hàng
             </button>
           </form>
@@ -124,9 +135,13 @@ export default function Product_detail() {
       </div>
       <hr className="h-12 sm:bg-gray-200 border-0" />
 
-      <div className="max-w-6xl  flex flex-col">
+      <div className="max-w-6xl mb-20 flex flex-col">
         <RatingAndCommentSection />
       </div>
+
+      <Link to="/cart">
+        <CartIcon itemCount={itemCount} />
+      </Link>
     </div>
   );
 }

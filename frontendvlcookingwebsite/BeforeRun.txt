@@ -9,3 +9,7 @@ install icons
 "npm i swiper"
 
 install swiper
+
+"npm i axios"
+
+install axios

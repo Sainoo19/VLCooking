@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import CartIcon from "../components/CartIcon";
 import Items from "../components/Items";
+import CartData from "../data/cartdata.json";
 import Data from "../data/data.json";
 
 export default function Search() {
   const [listings, setListings] = useState([]);
   const [loadings, setLoadings] = useState(false);
   const [searchData, setSearchData] = useState({});
+  const [itemCount, setItemCount] = useState(CartData.length); // Thêm state cho itemCount
+  const handleAddToCart = (item) => {
+    setItemCount(itemCount + 1);
+  };
 
   useEffect(() => {
     const fetchVLU = async () => {
@@ -180,10 +187,17 @@ export default function Search() {
           {!loadings &&
             listings &&
             listings.map((listing) => (
-              <Items key={listing._id} listing={listing} />
+              <Items
+                key={listing._id}
+                listing={listing}
+                handleAddToCart={handleAddToCart}
+              />
             ))}
         </div>
       </div>
+      <Link to="/cart">
+        <CartIcon itemCount={itemCount} />
+      </Link>
     </div>
   );
 }
