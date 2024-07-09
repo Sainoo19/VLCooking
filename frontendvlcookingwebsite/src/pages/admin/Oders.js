@@ -5,6 +5,7 @@ import Sidebar from "../../components/Sidebar";
 import Table from "../../components/Table";
 
 export default function Orders() {
+	const data = { keyword: "orders" };
 	return (
 		<div className="flex min-h-screen">
 			<Sidebar />
@@ -18,7 +19,8 @@ export default function Orders() {
 						<FaSearch className="text-slate-600 pl-1" />
 					</form>
 					<Link
-						to="/admin/create/order"
+						to="/admin/create"
+						state={{ data }}
 						className="flex items-center justify-center mr-3 rounded-lg min-h-[48px] bg-cyan-300 px-3 py-1 text-center hover:bg-black hover:text-white"
 					>
 						Create New

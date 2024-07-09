@@ -5,6 +5,7 @@ import Sidebar from "../../components/Sidebar";
 import Table from "../../components/Table";
 
 export default function Roles() {
+	const data = { keyword: "roles" };
 	return (
 		<div className="flex f-full">
 			<Sidebar />
@@ -18,14 +19,15 @@ export default function Roles() {
 						<FaSearch className="text-slate-600 pl-1" />
 					</form>
 					<Link
-						to="/admin/create/role"
+						to="/admin/create"
+						state={{ data }}
 						className="flex items-center justify-center mr-3 rounded-lg min-h-[48px] bg-cyan-300 px-3 py-1 text-center hover:bg-black hover:text-white"
 					>
 						Create New
 					</Link>
 				</div>
 				<div className="flex ml-0">
-					<Table Name="roles" route="roles"/>
+					<Table Name="roles" route="roles" />
 				</div>
 			</div>
 		</div>

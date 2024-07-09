@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 import Table from "../../components/Table";
 
-export default function Ingredient() {
-	const data = { keyword: "ingredients" };
+export default function Categories() {
+	const data = { keyword: "categories" };
 	return (
 		<div className="flex min-h-screen">
 			<Sidebar />
 			<div className="flex-1 p-3">
 				<div className="flex flex-col ml-0 my-2">
-					<h1 className="text-3xl font-bold">Manage Ingredient</h1>
+					<h1 className="text-3xl font-bold">Manage Category</h1>
 				</div>
 				<div className="flex flex-row-reverse my-5">
 					<form className="bg-slate-100 p-3 rounded-lg flex items-center w-80 mr-5">
@@ -26,8 +26,8 @@ export default function Ingredient() {
 						Create New
 					</Link>
 				</div>
-				<div className="flex ml-0">
-					<Table Name="ingredients" route="ingredients" />
+				<div className="flex justify-center">
+					<Table Name="categories" />
 				</div>
 			</div>
 		</div>
